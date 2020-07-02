@@ -1,0 +1,208 @@
+body{
+    background-size: cover;
+    background-image: url(../img/bg-diagonal-lines.jpg);
+    background-size: contain;
+	color: #333;
+	font-family: 'Montserrat', sans-serif;
+	opacity: 90%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    text-align: center;
+}
+
+div{
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+}
+
+video{
+    padding: 1%;
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 5px;
+  margin: 2px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+input[type=password] {
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=tel] {
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: gold;
+    background-color: black;
+}
+
+input[type=submit]:hover {
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: grey;
+    background-color: black;
+  }
+
+.modal-boton{
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: gold;
+    background-color: black;
+}
+
+.modal-boton:hover{
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: grey;
+    background-color: black;
+}
+
+.img-carrusel{
+    width: 100%;
+}  
+
+.container-carrusel{
+    background-color: transparent;
+    background-size: cover;
+}
+
+.container-informacion{
+    background-color: grey;
+    background-size: cover;
+}
+
+.container-sub-informacion{
+    padding: 10px;
+}
+
+.titulo-informacion{
+    background-color: green;
+    color: white;
+}
+
+.contenido-informacion{
+    background-color: white;
+    text-align: justify;
+}
+
+.container-informacion-titulo{
+    color: gold;
+    padding: 10px; 
+}
+
+.img-center{
+    text-align: center;
+}
+
+.img-informacion-size{
+    width: 100%;
+    height: 100%;
+}
+
+.nav-nombre-empresa{
+    padding: 3px;
+    color: white;
+}
+
+.navbar {
+    background: black;
+    position:  fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.main {
+    margin-top: 70px;
+}
+
+.container-tendencias{
+    background-color: white;
+    color: black;
+}
+
+.container-tendencias-titulo{
+    color: black;
+    padding: 10px;
+}
+.container-registro{
+    background-color: lightgrey;
+}
+
+.registro-formulario{
+    color: white;
+    background-color: black;
+    padding: 15px;
+}
+
+.container-registro-titulo{
+    color: maroon;
+    padding: 10px;
+}
