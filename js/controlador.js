@@ -64,18 +64,30 @@ $('#registrar').click(function(event) {
 
     //swal("Muy bien", "No hay campos invalido", "success");
 
-    event.preventDefault();
+    event.preventDefault(); 
     var datos = "nombre="+nombre+"&apellido="+apellido+"&correo="+correo+"&telefono="+telefono+"&contraseña="+contraseña;
 
-    //mandamos los datos al modelo: registro.php
+    //mandamos los datos al modelo registro.php
     $.ajax({
         url: 'php/registro.php',
         type: 'POST',
         data: datos,
     })
     .done(function(res) {
-        console.log("Registro satisfactorio");
-        $("#respuesta").html(res);
+        /*if para revisar si el correo ya se encuentra registrado o no en la BD
+        respuesta 1 es que se registro en la BD
+        respuesta 0 es porque ya esta registrado el correo en la BD*/
+        if(res==1){
+            swal("Muy bien", "Registro exitoso", "succes");
+        } else if (res==0){
+            swal("Error", "El usuario ya esta registrado", "error");
+        }
+
+        //con esto se vacian los datos del formulario una vez que se envian a registrar
+        $('.input').val(""); 
+        
+        /*console.log("Registro satisfactorio");
+        $("#respuesta").html(res);*/
     })
     .fail(function() {
         console.log("error");
@@ -137,7 +149,18 @@ $('#validar-sesion').click(function(event) {
         data: datos,
     })
     .done(function(res){
-        console.log(res);
+        
+
+        if(res== "0"){
+            swal("Error", "Datos Incorrectos", "error");
+        } else if(res== "1"){
+            location.href = 'php/admin.php'; //si es admin lo manda a la pagina de admin
+        } else if(res== "2"){
+            location.href = 'php/usuario.php'; //si no es admin lo manda con los usuarios mortales
+        }
+
+        //se vacian los campos del formulario despues de enviarlos
+        $('.input').val("");
     })
     .fail(function(){
         console.log("error");
