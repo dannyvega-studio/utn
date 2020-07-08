@@ -17,7 +17,7 @@ include 'conexion.php';
 
             <?php
             //se consultan los datos de la BD para que aparescan en la tabla
-            $select = "SELECT id, nombre, apellido, correo, telefono FROM usuario";
+            $select = "SELECT id, nombre, apellido, correo, telefono FROM usuario WHERE contraseña != '123456Aa@'";
             $respuesta_select = mysqli_query($conexion,$select);
             //mientras existan datos en la BD, estos se guardan en una variable $info
             while($info = mysqli_fetch_row($respuesta_select)){
