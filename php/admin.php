@@ -10,10 +10,10 @@
 
         <!-- ### CSS ### -->
         <!-- Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="../source/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
         <!-- FontAwesome -->
-        <link rel="stylesheet" type="text/css" href="../source/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
         <!-- Sweet Alert -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" rel="stylesheet">
         <!-- Original -->
@@ -162,11 +162,11 @@
     <!-- Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../source/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!-- Sweet Alert -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
     <!-- FontAwesome -->
-    <script src="../source/FontAwesome/js/all.min.js"></script>
+    <script src="../js/font-awesome.all.min.js"></script>
     <!-- Original -->
     <script src="../js/controlador.js"></script>
 
