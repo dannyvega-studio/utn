@@ -13,7 +13,7 @@ Una vez nos encontramos logeados con una cuenta administradora, podremos tener a
 
 De la misma manera el admin puede EDITAR y/o ELIMINAR usuarios de la BD
 
-![](screenshot/admin-editar.png)
+![](screenshot/admin-editar-1.png)
 
 Como se puede ver en el fondo por AJAX el usuario ha sido modificado
 
