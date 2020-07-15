@@ -1,8 +1,8 @@
 body{
     background-size: cover;
     background-image: url(../img/bg-diagonal-lines.jpg);
-    background-size: contain;
-	color: #333;
+    background-repeat: no-repeat;
+    color: black;
 	font-family: 'Montserrat', sans-serif;
 	opacity: 90%;
 }

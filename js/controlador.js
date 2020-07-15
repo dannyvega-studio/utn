@@ -31,38 +31,36 @@ $('#registrar').click(function(event) {
 
     //condicionantes para no dejar campos vacios//
     if(nombre.length == 0 || apellido.length == 0 || correo.length == 0 || telefono.length == 0 || contraseña.length == 0) {
-        swal("Error", "Favor de no dejar campos vacios", "error");
+        Swal.fire("Error", "Favor de no dejar campos vacios", "error");
         return false;
     } else if(nombre.length>30){
-        swal("Error", "El nombre es muy largo", "error");
+        Swal.fire("Error", "El nombre es muy largo", "error");
         return false;
     } else if(apellido.length>30){
-        swal("Error", "El apellido es muy largo", "error");
+        Swal.fire("Error", "El apellido es muy largo", "error");
         return false;
     } else if(correo.length>45){
-        swal("Error", "El correo es muy largo", "error");
+        Swal.fire("Error", "El correo es muy largo", "error");
         return false;
     } else if(!expresionCorreo.test(correo) && !expresionCorreoOficial.test(correo)){
-        swal("Error", "El correo no es valido", "error");
+        Swal.fire("Error", "El correo no es valido", "error");
         return false;
     } else if(isNaN(telefono)){
-        swal("Error", "Numero no valido", "error");
+        Swal.fire("Error", "Numero no valido", "error");
         return false;
     } else if(!expresionTelefono.test(telefono)){
-        swal("Error", "Numero no valido", "error");
+        Swal.fire("Error", "Numero no valido", "error");
         return false;
     } else if(telefono.length!== 10){
-        swal("Error", "Numero no valido", "error");
+        Swal.fire("Error", "Numero no valido", "error");
         return false;
     } else if(contraseña.length> 16){
-        swal("Error", "Contaseña muy larga", "error");
+        Swal.fire("Error", "Contaseña muy larga", "error");
         return false;
     } else if(!expresionContraseña.test(contraseña)){
-        swal("Error", "Contraseña no valida", "error");
+        Swal.fire("Error", "Contraseña no valida", "error");
         return false;
     }
-
-    //swal("Muy bien", "No hay campos invalido", "success");
 
     event.preventDefault(); 
     var datos = "nombre="+nombre+"&apellido="+apellido+"&correo="+correo+"&telefono="+telefono+"&contraseña="+contraseña;
@@ -78,10 +76,10 @@ $('#registrar').click(function(event) {
         respuesta 1 es que se registro en la BD
         respuesta 0 es porque ya esta registrado el correo en la BD*/
         if(res==1){
-            swal("Muy bien", "Registro exitoso", "success");
+            Swal.fire("Muy bien", "Registro exitoso", "success");
             return false;
         } else if (res==0){
-            swal("Error", "El usuario ya esta registrado", "error");
+            Swal.fire("Error", "El usuario ya esta registrado", "error");
             return false;
         }
         $('.input').val(""); //con esto se vacian los datos del formulario una vez que se envian a registrar
@@ -124,16 +122,16 @@ $('#sesion').click(function(event) {
 
     //condicionantes para no dejar campos vacios//
     if(validarCorreo.length == 0 || contraseña.length == 0) {
-        swal("Error", "Favor de no dejar campos vacios", "error");
+        Swal.fire("Error", "Favor de no dejar campos vacios", "error");
         return false;
     } else if(validarCorreo.length>30){
-        swal("Error", "El correo es muy largo", "error");
+        Swal.fire("Error", "El correo es muy largo", "error");
         return false;
     } else if(!expresionCorreo.test(validarCorreo) && !expresionCorreoOficial.test(validarCorreo)){
-        swal("Error", "El correo no es valido", "error");
+        Swal.fire("Error", "El correo no es valido", "error");
         return false;
     } else if(!expresionContraseña.test(validarContraseña)){
-        swal("Error", "Contraseña no valida", "error");
+        Swal.fire("Error", "Contraseña no valida", "error");
         return false;
     } 
 
@@ -148,7 +146,7 @@ $('#sesion').click(function(event) {
     .done(function(res){
 
         if(res == 0){
-            swal("Error", "Datos Incorrectos", "error");
+            Swal.fire("Error", "Datos Incorrectos", "error");
         } else if(res == 1){
             location.href = 'php/admin.php'; //si es admin lo manda a la pagina de admin
         } else if(res == 2){
@@ -198,38 +196,36 @@ $('#registrarN').click(function(event) {
 
     //condicionantes para no dejar campos vacios//
     if(nombre.length == 0 || apellido.length == 0 || correo.length == 0 || telefono.length == 0 || contraseña.length == 0) {
-        swal("Error", "Favor de no dejar campos vacios", "error");
+        Swal.fire("Error", "Favor de no dejar campos vacios", "error");
         return false;
     } else if(nombre.length>30){
-        swal("Error", "El nombre es muy largo", "error");
+        Swal.fire("Error", "El nombre es muy largo", "error");
         return false;
     } else if(apellido.length>30){
-        swal("Error", "El apellido es muy largo", "error");
+        Swal.fire("Error", "El apellido es muy largo", "error");
         return false;
     } else if(correo.length>45){
-        swal("Error", "El correo es muy largo", "error");
+        Swal.fire("Error", "El correo es muy largo", "error");
         return false;
     } else if(!expresionCorreo.test(correo) && !expresionCorreoOficial.test(correo)){
-        swal("Error", "El correo no es valido", "error");
+        Swal.fire("Error", "El correo no es valido", "error");
         return false;
     } else if(isNaN(telefono)){
-        swal("Error", "Numero no valido", "error");
+        Swal.fire("Error", "Numero no valido", "error");
         return false;
     } else if(!expresionTelefono.test(telefono)){
-        swal("Error", "Numero no valido", "error");
+        Swal.fire("Error", "Numero no valido", "error");
         return false;
     } else if(telefono.length!== 10){
-        swal("Error", "Numero no valido", "error");
+        Swal.fire("Error", "Numero no valido", "error");
         return false;
     } else if(contraseña.length> 16){
-        swal("Error", "Contaseña muy larga", "error");
+        Swal.fire("Error", "Contaseña muy larga", "error");
         return false;
     } else if(!expresionContraseña.test(contraseña)){
-        swal("Error", "Contraseña no valida", "error");
+        Swal.fire("Error", "Contraseña no valida", "error");
         return false;
     }
-
-    //swal("Muy bien", "No hay campos invalido", "success");
 
     event.preventDefault(); 
     var datos = "nombre="+nombre+"&apellido="+apellido+"&correo="+correo+"&telefono="+telefono+"&contraseña="+contraseña;
@@ -245,9 +241,10 @@ $('#registrarN').click(function(event) {
         respuesta 1 es que se registro en la BD
         respuesta 0 es porque ya esta registrado el correo en la BD*/
         if(res==1){
-            swal("Muy bien", "Registro exitoso", "success");
+            $('#tabla').load('tabla.php');
+            Swal.fire("Muy bien", "Registro exitoso", "success");
         } else if (res==0){
-            swal("Error", "El usuario ya esta registrado", "error");
+            Swal.fire("Error", "El usuario ya esta registrado", "error");
         }
         $('.input').val(""); //con esto se vacian los datos del formulario una vez que se envian a registrar
     })
@@ -262,14 +259,30 @@ $('#registrarN').click(function(event) {
 });
 
 
+// ### LLENADO AUTOMATICO DEL MODAL CON LOS DATOS DEL USUARIO SELECCIONADO PARA EDITAR ### //
+
+function agregarFormulario(datos){
+    
+    d = datos.split('||');
+
+    id = $('#idE').val(d[0]);
+    nombre = $('#nombreE').val(d[1]);
+    apellido = $('#apellidoE').val(d[2]);
+    correo = $('#correoE').val(d[3]);
+    telefono = $('#telefonoE').val(d[4]);
+    contraseña = $('#contraseñaE').val(d[5]);
+    $('#correoE').attr('disabled', true); //se deshabilita que el usuario pueda modificar el correo
+}
+
 // ### REGISTRAR USUARIO NUEVO ### //
-$('#modificar').click(function(event) { 
+$('#editarN').click(function(event) { 
 
     //declaracion de variables//
     var nombre, apellido, correo, contraseña, telefono, 
     expresionCorreo, expresionCorreoOficial, expresionTelefono, expresionContraseña;
 
     //captura de datos usando jquery//
+    id = $('#idE').val();
     nombre = $('#nombreE').val();
     apellido = $('#apellidoE').val();
     correo = $('#correoE').val();
@@ -277,67 +290,55 @@ $('#modificar').click(function(event) {
     telefono = $('#telefonoE').val();
 
     //expresiones regulares aqui//
-    //correo//
-    /*Para el email debe de aceptar correos como por ejemplo: tic-92000@utnay.edu.mx, mi.correo@gmail.com, correo@outlook.com, etc.*/
-    expresionCorreo=/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    expresionCorreoOficial=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-    //telefono//
+     //telefono//
     expresionTelefono=/^[\(]?[\+]?(\d{2}|\d{3})[\)]?[\s]?((\d{6}|\d{8})|(\d{3}[\*\.\-\s]){2}\d{3}|(\d{2}[\*\.\-\s]){3}\d{2}|(\d{4}[\*\.\-\s]){1}\d{4})|\d{8}|\d{10}|\d{12}$/;
     //contraseña//
     expresionContraseña=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,16}$/;
 
     //condicionantes para no dejar campos vacios//
     if(nombre.length == 0 || apellido.length == 0 || correo.length == 0 || telefono.length == 0 || contraseña.length == 0) {
-        swal("Error", "Favor de no dejar campos vacios", "error");
+        Swal.fire("Error", "Favor de no dejar campos vacios", "error");
         return false;
     } else if(nombre.length>30){
-        swal("Error", "El nombre es muy largo", "error");
+        Swal.fire("Error", "El nombre es muy largo", "error");
         return false;
     } else if(apellido.length>30){
-        swal("Error", "El apellido es muy largo", "error");
-        return false;
-    } else if(correo.length>45){
-        swal("Error", "El correo es muy largo", "error");
-        return false;
-    } else if(!expresionCorreo.test(correo) && !expresionCorreoOficial.test(correo)){
-        swal("Error", "El correo no es valido", "error");
+        Swal.fire("Error", "El apellido es muy largo", "error");
         return false;
     } else if(isNaN(telefono)){
-        swal("Error", "Numero no valido", "error");
+        Swal.fire("Error", "Numero no valido", "error");
         return false;
     } else if(!expresionTelefono.test(telefono)){
-        swal("Error", "Numero no valido", "error");
+        Swal.fire("Error", "Numero no valido", "error");
         return false;
     } else if(telefono.length!== 10){
-        swal("Error", "Numero no valido", "error");
+        Swal.fire("Error", "Numero no valido", "error");
         return false;
     } else if(contraseña.length> 16){
-        swal("Error", "Contaseña muy larga", "error");
+        Swal.fire("Error", "Contaseña muy larga", "error");
         return false;
     } else if(!expresionContraseña.test(contraseña)){
-        swal("Error", "Contraseña no valida", "error");
+        Swal.fire("Error", "Contraseña no valida", "error");
         return false;
     }
 
-    //swal("Muy bien", "No hay campos invalido", "success");
-
     event.preventDefault(); 
-    var datos = "nombreE="+nombre+"&apellidoE="+apellido+"&correoE="+correo+"&telefonoE="+telefono+"&contraseñaE="+contraseña;
+    var datos = "id="+id+"&nombre="+nombre+"&apellido="+apellido+"&correo="+correo+"&telefono="+telefono+"&contraseña="+contraseña;
 
     //mandamos los datos al modelo registro.php
     $.ajax({
-        url: '../php/registro.php',
+        url: '../php/editar.php',
         type: 'POST',
         data: datos,
     })
     .done(function(res) {
         /*if para revisar si el correo ya se encuentra registrado o no en la BD
-        respuesta 1 es que se registro en la BD
-        respuesta 0 es porque ya esta registrado el correo en la BD*/
+        respuesta 1 es que se registro en la BD*/
         if(res==1){
-            swal("Muy bien", "Registro exitoso", "success");
-        } else if (res==0){
-            swal("Error", "El usuario ya esta registrado", "error");
+            $('#tabla').load('tabla.php');
+            Swal.fire("Muy bien", "Edicion exitosa", "success");
+        } else {
+            Swal.fire("Error", "Ha ocurrido un error", "error");
         }
         $('.input').val(""); //con esto se vacian los datos del formulario una vez que se envian a registrar
     })
@@ -350,3 +351,49 @@ $('#modificar').click(function(event) {
     })
 
 });
+
+// ### CONFIRMAR ELIMINAR USUARIO DESDE ADMIN ### //
+
+function confirmarEliminar(id){
+    Swal.fire ({
+        title: '¿Seguro desea eliminar el registro?',
+        text: "No podra revertirse...",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#00BB2D',
+        cancelButtonColor: '#FF0000',
+        confirmButtonText: 'Si, eliminalo'
+    }).then ((result)=> {
+        if (result.value) {
+            eliminarRegistro(id);
+        }
+    })
+}
+
+// ######## ELIMINACION DE REGISTRO ######## //
+
+function eliminarRegistro(id){
+    event.preventDefault(); //evita que se envien datos sin usar AJAX
+    var datos = "id=" + id; //cadena que se envia al AJAX
+
+    $.ajax({
+        url: '../php/eliminar.php',
+        type: 'POST',
+        data: datos,
+    })
+    .done(function(res){
+        if(res==1){
+            $('#tabla').load('tabla.php');
+            Swal.fire ("ELIMINADO","El registro ha sido eliminado", "success");
+        } else {
+            Swal.fire("Error", "Ocurrio un error en el servidor", "error");
+        }
+    })
+    .fail(function(res) {
+        console.log(res);
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    })
+}

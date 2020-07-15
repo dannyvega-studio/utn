@@ -11,14 +11,10 @@
         <!-- ### CSS ### -->
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
         <!-- FontAwesome -->
         <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-        <!-- Sweet Alert -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" rel="stylesheet">
         <!-- Original -->
         <link rel="stylesheet" type="text/css" href="../css/estilos.admin.css">
-
         <!-- ### ICONO DEL SITIO ### -->
         <link rel="icon" href="../ico/UT.ico">
 
@@ -70,9 +66,11 @@
         <div id="tabla" class="mt-3"></div>
     </div>
 
+    <!-- ###################### INICIAN MODALES ############################ -->
+
     <!-- MODAL PARA REGISTRAR NUEVO USUARIO -->
     <!-- ### MODAL INICIAR SESION ### -->
-    <div><form action="" method="POST">
+    <form action="" method="POST">
     <div class="modal fade" id="modalAdminN" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog form-dark" role="document">
             <!--Content-->
@@ -108,14 +106,12 @@
             <!--/.Content-->
         </div>
     </div>
-    </form></div>
+    </form>
     <!-- ### TERMINA MODAL REGISTRO NUEVO ### -->
 
-
-
     <!-- MODAL PARA EDITAR -->
-     <!-- ### MODAL EDITAR ### -->
-     <div><form action="" method="POST">
+    <!-- ### MODAL EDITAR ### -->
+    <form action="" method="POST">
     <div class="modal fade" id="modalAdminE" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog form-dark" role="document">
             <!--Content-->
@@ -133,6 +129,7 @@
                     <div class="modal-body">
                         <!--Body-->
                         <div class="md-form mb-5">
+                        <input type="text" id="idE" name="" hidden="">
                         <input type="text" id="nombreE" name="nombreE" placeholder="Nombre"><br>
                         <input type="text" id="apellidoE" name="apellidoE" placeholder="Apellidos"><br>
                         <input type="email" id="correoE" name="correoE" placeholder="Correo"><br>
@@ -142,7 +139,7 @@
 
                         <div class="row d-flex align-items-center mb-4">
                             <div class="text-center mb-3 col-md-12">
-                                <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1" id="modificar" name="modificar">Editar Usuario</button>
+                                <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1" id="editarN" name="editarN">Editar Usuario</button>
                             </div>
                         </div>
                     </div>
@@ -151,9 +148,10 @@
             <!--/.Content-->
         </div>
     </div>
-    </form></div>
+    </form>
     <!-- ### TERMINA MODAL EDITAR ### -->
 
+    <!-- ###################### TERMINAN MODALES ############################ -->
 
     <!-- ### SCRIPTS ### -->
     <!-- IMPORTANTE EL ORDEN PORQUE LUEGO NO FUNCIONAN JAJA -->
@@ -164,9 +162,9 @@
     <!-- Bootstrap -->
     <script src="../js/bootstrap.min.js"></script>
     <!-- Sweet Alert -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+    <script src="../js/sweetalert2@9.js"></script>
     <!-- FontAwesome -->
-    <script src="../js/font-awesome.all.min.js"></script>
+    <script src="../js/fontawesome.all.min.js"></script>
     <!-- Original -->
     <script src="../js/controlador.js"></script>
 
